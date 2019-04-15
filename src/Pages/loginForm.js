@@ -7,7 +7,7 @@ const loginForm = (props) => {
 
         <div>
         <Navigation /> 
-            <div style={styles}> 
+            <div className={styles.Card}> 
             <div style={{display: 'flex', justifyContent: 'center'}}>
             <Card  style={{ width: '18rem' }}> 
             <Card.Header>Login Page</Card.Header>
