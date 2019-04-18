@@ -67,3 +67,6 @@ Backend - NodeJS, MongoDB
 - Use opensource APIs to make recommendations 
 (maybe trip advisor or skyscanner?) 
 ```
+
+### Developer
+- Se Jin Lee 
