@@ -45,7 +45,7 @@ Backend - NodeJS, MongoDB
 ```
 
 
-### Group Management System   ( ~ will be implemented 5/1 )
+### Group Management System   ( ~ will be implemented 5/15)
 ```
 - Creating group , Deleting a group 
 - Inviting friends to a group
@@ -67,6 +67,13 @@ Backend - NodeJS, MongoDB
 - Use opensource APIs to make recommendations 
 (maybe trip advisor or skyscanner?) 
 ```
+
+### Features that could be implented in the future 
+```
+make groups private / public.
+private groups where only friends you invite can join.
+public groups will allows strangers to send requests to join your group.
+``` 
 
 ### Developer
 - Se Jin Lee 
