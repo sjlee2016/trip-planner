@@ -1,68 +1,69 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Trip Planner
+## Purpose
+the main goal of this project is to create a platform that makes creating plans for trips easiler and more enjoyable for everyone.
 
-## Available Scripts
+A trip with a group of people can be sometimes very stressful, because people want different things. Some people might want to go see the beautiful scenery of near beaches while some may want to go visit local night markets. Even worse,some may not even know exactly what they want to see in a foreign place. In order to make this process easier, the platform implements recommendation system, ranking system(through likes). 
 
-In the project directory, you can run:
+## Solution
+This system will multiple pages, with different services
+- User Information Services : users can display their status, profile picture and etc 
+- Friend services
+: users can send and accept friend requests.  
+- Group management : users can create a group by inviting their friends. The group will share the same calendar. The group will include one admin user. 
+- Trip Planner Service :  Uses trip-advisor APIs to make suggestions based on where the group wants to travel. Users can create new plans for the trip. 
+  ```
+  Example of a plan for trip to Seoul, Korea stored in database
+  plan { 
+  "user" : "sjlee2016",     
+  "date" : "2019-4-19",
+  "start-time" : "16:00",
+  "end-time": "18:00",
+  "location" : "gyeongbokgung",
+  "details" : "let's see the beautiful palace in korea",
+  "likes" : 3,
+  "dislikes" : 0
+  } 
+  ``` 
+  and if the new plan receive majority of dislikes(anonymous), it will be removed from the group calendar. If two plans were suggested within the same time frame, the plan with more likes will be displayed in the calendar.     
 
-### `npm start`
+## Implementation
+Frontend - React & Redux
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Backend - NodeJS, MongoDB 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Authentication   ( ~ will be implemented 4/19 )
+```
+- Local Authentication
+- Google Authentication 
+```
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Friend System   ( ~ will be implemented 5/1 )
+```
+- Sending Friend Request
+- Accepting or Denying Friend Request
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Group Management System   ( ~ will be implemented 5/1 )
+```
+- Creating group , Deleting a group 
+- Inviting friends to a group
+- Accepting invitation 
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Plan management System   ( ~ will be implemented 6/1 )
+```
+- Create plans
+- likes / dislikes 
+- displaying plans in the group calendar 
+```
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Recommendation System   ( ~ will be implemented 6/15 )
+```
+- Use opensource APIs to make recommendations 
+(maybe trip advisor or skyscanner?) 
+```
