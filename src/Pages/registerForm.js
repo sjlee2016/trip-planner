@@ -15,7 +15,7 @@ const registerForm = (props) => {
             <div style={{display: 'flex', justifyContent: 'center'}}>
             <Card  style={{ width: '30rem' }}> 
             <Card.Header>가입하기</Card.Header>
-           <Card.Img variant="top" src="./images/register.jpg" />
+           <Card.Img variant="top" src="http://storage.googleapis.com/dev-truth-229618.appspot.com/images/register.jpg" />
   
             <Card.Body>
                 <Form>

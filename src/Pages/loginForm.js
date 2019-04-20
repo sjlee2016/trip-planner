@@ -14,7 +14,7 @@ const loginForm = (props) => {
             <div style={{display: 'flex', justifyContent: 'center'}}>
             <Card  style={{ width: '30rem' }}> 
             <Card.Header>로그인 페이지</Card.Header>
-           <Card.Img variant="top" src="./images/login.jpg" />
+           <Card.Img variant="top" src="http://storage.googleapis.com/dev-truth-229618.appspot.com/images/login.jpg" />
   
             <Card.Body>
                 <Form>

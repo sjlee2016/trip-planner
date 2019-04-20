@@ -9,6 +9,7 @@ import Home from './Pages/Home';
 class App extends Component {
   render() {
     return (
+
       <div> 
       <Router>
         <Route path="/login/" component={loginForm} />
