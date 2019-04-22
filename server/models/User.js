@@ -21,7 +21,6 @@ var userSchema = mongoose.Schema({
 
     groups : [
       { type: mongoose.Schema.Types.ObjectId, ref: "Group", required: true }
-    
    ]
 });
 

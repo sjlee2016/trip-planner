@@ -1,11 +1,23 @@
 var express  = require('express');
+const authMiddleware = (req,res,next) => {
+    if(!req.isAuthenticated()) {
+        res.status(401).send("You are not authenticated");
+        
+    }else {
+        return next(); 
+    }
+};
+
+var User = require("../models/User");
+
 module.exports = function(app, passport){
     
     app.use(express.urlencoded());
 // Parse JSON bodies (as sent by API clients)
     app.use(express.json());
-    var User = require("../models/User");
 	app.post('/login', (req,res) => {
+    req.session.email = req.body.email;
+    req.session.password = req.body.password; 
     passport.authenticate('local-login', (err,user,info) => {
         if(err){
             return res.status(400).send("failure"); 
@@ -16,6 +28,7 @@ module.exports = function(app, passport){
         }
 
         req.login(user, err => {
+            console.log("[SIGN-UP] successfully logged in");
             res.send("logged in");
         })
 
@@ -25,11 +38,11 @@ module.exports = function(app, passport){
 	app.post('/signup', (req,res) => {
         User.findOne({'local.email': req.body.email}, function(err, user) {
             if(err){
-                console.log("[SIGN-UP} failed to sign up");
+                console.log("[SIGN-UP] failed to sign up");
                 return res.status(400).send("failed to sign up");
             }
             if(user){
-                console.log("[SIGN-UP} Email already exists");
+                console.log("[SIGN-UP] Email already exists");
                 return res.status(400).send("failed. email already exists");
             }
             else{
@@ -54,7 +67,7 @@ module.exports = function(app, passport){
 });  
     
 
-	app.get('/profile', authMiddleware, function(req, res){
+	app.get('/profile', authMiddleware, (req, res) => {
         console.log("successful!");
         return 	req.user;
 	});
@@ -68,13 +81,5 @@ module.exports = function(app, passport){
 	app.get('/auth/google', passport.authenticate('google', { scope : ['profile', 'email'] }));
 
 
-function authMiddleware(req,res,next) {
-    if(!req.isAuthenticated()) {
-        res.status(401).send("You are not authenticated");
-        
-    }else {
-        return next(); 
-    }
-};
 
 };

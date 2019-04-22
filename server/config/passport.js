@@ -41,7 +41,10 @@ module.exports = function(passport){
 
 	// 	}));
 
-	 passport.use(new LocalStrategy(
+	 passport.use('local-login',new LocalStrategy({ // or whatever you want to use
+        usernameField: 'email',    // define the parameter in req.body that passport can use as username and password
+        passwordField: 'password'
+      },
         function(email, password, done) {
         User.findOne({ 'local.email' :  email }, function(err, user) {
             if (err)
