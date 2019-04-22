@@ -6,6 +6,7 @@ import loginForm  from './Pages/loginForm';
 import registerForm  from './Pages/registerForm';
 import CalendarPage from './Pages/CalendarPage';
 import Home from './Pages/Home';
+import DraggableCalendar from './Pages/DraggableCalendar'; 
 class App extends Component {
   render() {
     return (
@@ -15,6 +16,8 @@ class App extends Component {
         <Route path="/login/" component={loginForm} />
         <Route path="/register/" component={registerForm} />
         <Route path="/scheduler/" component={CalendarPage} />
+        <Route path="/drag/" component={DraggableCalendar} />
+        
         <Route exact path="/" component={Home} /> 
      
     </Router>
