@@ -13,7 +13,16 @@ var userSchema = mongoose.Schema({
         token        : String,
         email        : String,
         name         : String
-    }
+    },
+
+    friends : [
+      { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }
+    ],
+
+    groups : [
+      { type: mongoose.Schema.Types.ObjectId, ref: "Group", required: true }
+    
+   ]
 });
 
 userSchema.methods.generateHash = function(password) {

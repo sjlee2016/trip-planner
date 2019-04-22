@@ -22,20 +22,7 @@ module.exports = function(app, passport){
     })(req,res);
     });     
 
-    app.post('/temp', function(req,res) {
-
-        console.log(req); 
-    });
 	app.post('/signup', (req,res) => {
-        console.log(req);
-        console.log("email" + req.body.email);
-        console.log("name" + req.body.name);
-        console.log("password" + req.body.password);
-        
-        // if(!req.body.email || !req.body.password || !req.body.name){
-        //     console.log("[SIGN-UP] incorrect body parameters");
-        //     return res.status(400).send("[SIGN-UP] incorrect body parameters");
-        // }
         User.findOne({'local.email': req.body.email}, function(err, user) {
             if(err){
                 console.log("[SIGN-UP} failed to sign up");
