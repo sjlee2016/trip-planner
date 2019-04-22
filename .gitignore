@@ -12,8 +12,7 @@
 /build
 
 #API Key
-/Users/sejinlee/Desktop/trip-planner/server/config/auth.js 
-
+server/config/auth.js
 # misc
 .DS_Store
 .env.local
