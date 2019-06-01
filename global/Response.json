@@ -1,0 +1,20 @@
+{
+    "STATUS" : {
+        "OK" : 200,
+        "NOT_OK": 400,
+        "UNAUTHORIZED" :  401, 
+        "FORBIDDEN" : 403 ,
+        "NOT_FOUND" : 404, 
+        "INTERNAL_ERROR" : 500
+    },
+    "MESSAGE" : {
+        "OK" : "Successful",
+        "NOT_OK" : "Unsuccessful", 
+        "UNAUTHORIZED" : "Unauthorized", 
+        "FORBIDDEN" : "forbidden", 
+        "NOT_FOUND" : "not found", 
+        "INTERNAL_ERROR" : "internal error"
+   
+    }
+
+}
