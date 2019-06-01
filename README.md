@@ -39,12 +39,10 @@ Backend - NodeJS, MongoDB
 
 
 ### Friend System   ( ~ will be implemented 5/1 ) 
- 
-```
--[X] Sending Friend Request
--[X]Accepting or Denying Friend Request
-```
 
+- [x] Sending Friend Request
+- [x] Accepting Friend Request
+- [x] Denying Friend Request
 
 ### Group Management System   ( ~ will be implemented 5/15)
 ```
