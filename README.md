@@ -31,12 +31,14 @@ Frontend - React & Redux
 
 Backend - NodeJS, MongoDB 
 
-### Authentication   ( ~ will be implemented 4/19 )
-```
-- Local Authentication
-- Google Authentication 
-```
+### User System   ( ~ will be implemented 4/19 )
 
+- [x] Local Authentication
+- [x] Google Authentication 
+- [x] Login, Register
+- [ ] Delete Account
+- [x] Make, Edit Profile 
+- [ ] Upload User photo 
 
 ### Friend System   ( ~ will be implemented 5/1 ) 
 
@@ -45,27 +47,31 @@ Backend - NodeJS, MongoDB
 - [x] Denying Friend Request
 
 ### Group Management System   ( ~ will be implemented 5/15)
-```
-- Creating group , Deleting a group 
-- Inviting friends to a group
-- Accepting invitation 
-```
+
+- [x] Creating a group 
+- [x] Leaving a group
+- [x] Deleting a group
+- [x] Inviting users to a group 
+- [x] making a user as an admin
 
 
 ### Plan management System   ( ~ will be implemented 6/1 )
-```
-- Create plans
-- likes / dislikes 
-- displaying plans in the group calendar 
-```
-
+- [ ] Create a plan
+- [ ] likes / dislikes a plan
+- [ ] Delete a plan
+- [ ] Display plans in the group calandar 
 
 
 ### Recommendation System   ( ~ will be implemented 6/15 )
-```
-- Use opensource APIs to make recommendations 
-(maybe trip advisor or skyscanner?) 
-```
+
+- [ ] Use open source API to make recommendations of where users should travel 
+
+
+### Admin Portal ( ~ will be implemented 7/1 ) 
+- [ ] Manage users, groups 
+- [ ] Data analysis 
+- [ ] Q/A ? 
+
 
 ### Features that could be implented in the future 
 ```
