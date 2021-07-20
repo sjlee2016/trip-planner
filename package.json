@@ -31,7 +31,7 @@
     "mongoose": "^5.5.11",
     "nodemailer": "^6.2.1",
     "nodemailer-smtp-transport": "^2.7.4",
-    "react-native": "^0.59.8",
+    "react-native": "^0.62.3",
     "request": "^2.88.0"
   },
   "devDependencies": {
